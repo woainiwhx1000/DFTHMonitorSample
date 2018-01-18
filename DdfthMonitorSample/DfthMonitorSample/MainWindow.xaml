@@ -1,0 +1,28 @@
+﻿<Window x:Class="DfthMonitorSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DfthMonitorSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Canvas>
+        <Label Content="姓名:" Canvas.Top="10" Canvas.Left="150"/>
+        <TextBox x:Name="UserName" Canvas.Top="13" Canvas.Left="220" MinWidth="100" />
+        <Label Content="年龄:" Canvas.Top="30" Canvas.Left="150"/>
+        <TextBox x:Name="UserAge" Canvas.Top="33" Canvas.Left="220" MinWidth="100" />
+        <Label Content="性别:" Canvas.Top="50" Canvas.Left="150"/>
+        <StackPanel Canvas.Top="53" Canvas.Left="220" Orientation="Horizontal">
+            <RadioButton Content="男" x:Name="Male" IsChecked="true"/>
+            <RadioButton Content="女" x:Name="female"/>
+        </StackPanel>
+        <Label Content="存储路径:" Canvas.Top="70" Canvas.Left="150"/>
+        <TextBox x:Name="ECGFile" Text="c:\\ecgfile\\" Canvas.Top="73" Canvas.Left="220" MinWidth="200" />
+        <Button x:Name="measure" Canvas.Left="210" Canvas.Top="100" Content="开始测量" Width="100" Height="30" Click="StartMeasure"/>
+
+        <Label Content="心电文件路径:" Canvas.Top="130" Canvas.Left="100"/>
+        <TextBox x:Name="StoreFile" Canvas.Top="133" Canvas.Left="220" Width="200" />
+        <Button x:Name="scan" Canvas.Left="430" Canvas.Top="125" Content="浏览" Width="30" Height="30" Click="Scan"/>
+        <Button x:Name="look" Canvas.Left="210" Canvas.Top="170" Content="查看历史" Width="100" Height="30" Click="Look"/>
+    </Canvas>
+</Window>
