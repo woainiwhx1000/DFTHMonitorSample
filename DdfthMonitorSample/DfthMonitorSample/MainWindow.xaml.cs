@@ -22,9 +22,11 @@ namespace DfthMonitorSample
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static DfthMonitorOutter outter;
         public MainWindow()
         {
             InitializeComponent();
+            outter = new DfthMonitorOutter();
         }
 
         private void StartMeasure(object sender, RoutedEventArgs e)
@@ -58,7 +60,6 @@ namespace DfthMonitorSample
                 return;
             }
             string userGender = Male.IsChecked  == true ? "男" : "女";
-            DfthMonitorOutter outter = new DfthMonitorOutter();
             outter.StartMeasure(userName, age, userGender, filePath,result: MeausreResult);
         }
 
@@ -111,7 +112,6 @@ namespace DfthMonitorSample
                 return;
             }
             string userGender = Male.IsChecked == true ? "男" : "女";
-            DfthMonitorOutter outter = new DfthMonitorOutter();
             outter.PlayBackByFilePath(userName, age, userGender, filePath);
         }
     }
